@@ -34,7 +34,7 @@ export default function Home() {
             alt='Cam Velucci Photography icon'
             width={560}
             height={1074}
-            className='block w-[120px] h-auto'
+            className='block w-[48px] h-auto'
           />
         </div>
 
@@ -45,28 +45,6 @@ export default function Home() {
           <br />
           photography
         </h1>
-
-        <p className='hero-tagline-soft'>
-          Exposing the beauty in the in-between
-        </p>
-        <div className='location'>
-          <svg
-            width='10'
-            height='13'
-            viewBox='0 0 10 13'
-            fill='none'
-            aria-hidden
-          >
-            <path
-              d='M5 1C2.8 1 1 2.8 1 5c0 3 4 7 4 7s4-4 4-7c0-2.2-1.8-4-4-4z'
-              stroke='#2A3527'
-              strokeWidth='1'
-              fill='none'
-            />
-            <circle cx='5' cy='5' r='1.2' fill='#2A3527' />
-          </svg>
-          Hertfordshire, England
-        </div>
 
         <div className='ornament'>
           <div className='ornament-line' />
