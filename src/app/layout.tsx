@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -19,9 +20,6 @@ export const metadata: Metadata = {
   title: "Cam Velucci Photography — Coming Soon",
   description:
     "Emotive lifestyle motherhood and family photography in Hertfordshire, England.",
-  icons: {
-    icon: "/images/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -34,7 +32,10 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${sourceSerif.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
