@@ -222,6 +222,76 @@ nav {
   color: var(--gold);
 }
 
+/* ─── PORTFOLIO ─── */
+.portfolio {
+  background: var(--forest);
+  padding: 4rem 6% 5rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.7s ease both 0.5s;
+}
+
+.portfolio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 80% 10%,
+      rgba(181, 103, 78, 0.15) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 10% 90%,
+      rgba(201, 185, 138, 0.07) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.portfolio .section-divider {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio .section-divider-line {
+  background: rgba(240, 234, 224, 0.12);
+}
+
+.portfolio-grid {
+  position: relative;
+  z-index: 1;
+  column-count: 4;
+  column-gap: 0.6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  break-inside: avoid;
+}
+
+.portfolio-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .portfolio-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-grid {
+    column-count: 2;
+  }
+}
+
 /* ─── GET IN TOUCH ─── */
 .contact {
   background: var(--forest);

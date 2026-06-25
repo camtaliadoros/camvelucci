@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import PortfolioSection from '@/components/PortfolioSection';
 
 const CVP_ICON = '/images/CVP Icon.png';
+
+export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
@@ -55,6 +58,8 @@ export default function Home() {
         <div className='tagline'>Website coming soon</div>
       </section>
 
+      <PortfolioSection />
+
       <section className='contact' id='contact'>
         <div className='contact-inner'>
           <div className='contact-eyebrow'>In the meantime</div>
@@ -69,6 +74,8 @@ export default function Home() {
             Interested in a session, or just want to know more?
             <br />
             I&apos;d love to hear from you.
+            <br />
+            Packages from £150 — introductory offer for early bookings
           </p>
 
           <div className='contact-options'>
