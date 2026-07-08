@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "Cam Velucci Photography — Coming Soon",
   description:
     "Emotive lifestyle motherhood and family photography in Hertfordshire, England.",
+  icons: {
+    icon: "/images/Logo Stamp_Forest.png",
+    apple: "/images/Logo Stamp_Forest.png",
+  },
 };
 
 export default function RootLayout({

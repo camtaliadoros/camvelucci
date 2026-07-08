@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import PortfolioSection from '@/components/PortfolioSection';
 
-const CVP_ICON = '/images/CVP Icon.png';
-
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
@@ -10,37 +8,19 @@ export default function Home() {
     <div className='page'>
       <nav>
         <div className='nav-logo'>
-          <div className='nav-logo-row'>
-            <Image
-              src={CVP_ICON}
-              alt='Cam Velucci Photography icon'
-              width={560}
-              height={1074}
-              className='block h-[38px] w-auto shrink-0'
-              priority
-            />
-            <div>
-              <div className='nav-logo-name'>Cam Velucci</div>
-              <div className='nav-logo-sub'>Photography</div>
-            </div>
-          </div>
+          <Image
+            src='/images/Full Logo_Forest and Terracotta.png'
+            alt='Cam Velucci Photography'
+            width={1200}
+            height={400}
+            className='block h-[48px] w-auto'
+            priority
+          />
         </div>
         <div className='nav-tag'>Hertfordshire, England</div>
       </nav>
 
       <section className='hero'>
-        <div className='hero-eyebrow'>Something beautiful is coming</div>
-
-        <div className='monogram'>
-          <Image
-            src={CVP_ICON}
-            alt='Cam Velucci Photography icon'
-            width={560}
-            height={1074}
-            className='block w-[48px] h-auto'
-          />
-        </div>
-
         <h1 className='hero-headline'>
           Emotive lifestyle
           <br />
@@ -55,7 +35,7 @@ export default function Home() {
           <div className='ornament-line' />
         </div>
 
-        <div className='tagline'>Website coming soon</div>
+        <div className='tagline'>Summer sessions available</div>
       </section>
 
       <PortfolioSection />
