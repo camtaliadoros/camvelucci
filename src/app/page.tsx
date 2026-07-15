@@ -35,7 +35,7 @@ export default function Home() {
           <div className='ornament-line' />
         </div>
 
-        <div className='tagline'>Summer sessions available</div>
+        <div className='tagline'>Story-led summer sessions available</div>
       </section>
 
       <PortfolioSection />
