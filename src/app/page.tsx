@@ -24,7 +24,7 @@ export default function Home() {
         <h1 className='hero-headline'>
           Expressive photography
           <br />
-          for families who
+          for families &amp; mothers who
           <br />
           <em>feel it all</em>
         </h1>
