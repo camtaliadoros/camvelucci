@@ -22,9 +22,9 @@ export default function Home() {
 
       <section className='hero'>
         <h1 className='hero-headline'>
-          Emotive lifestyle
+          Expressive family
           <br />
-          motherhood <em>&amp;</em> family
+          <em>&amp;</em> motherhood
           <br />
           photography
         </h1>
