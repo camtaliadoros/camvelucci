@@ -17,7 +17,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='nav-tag'>Hertfordshire, England</div>
+        <div className='nav-tag'>Lifestyle family &amp; motherhood photographer in Hertfordshire, England</div>
       </nav>
 
       <section className='hero'>
