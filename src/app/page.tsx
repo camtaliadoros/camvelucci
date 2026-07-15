@@ -26,7 +26,7 @@ export default function Home() {
           <br />
           for families who
           <br />
-          feel it all
+          <em>feel it all</em>
         </h1>
 
         <div className='ornament'>
