@@ -22,11 +22,11 @@ export default function Home() {
 
       <section className='hero'>
         <h1 className='hero-headline'>
-          Expressive family
+          Expressive photography
           <br />
-          <em>&amp;</em> motherhood
+          for families who
           <br />
-          photography
+          feel it all
         </h1>
 
         <div className='ornament'>
