@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PortfolioSection from '@/components/PortfolioSection';
+import EnquiryForm from '@/components/EnquiryForm';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,6 +40,18 @@ export default function Home() {
       </section>
 
       <PortfolioSection />
+
+      <section className='booking' id='book'>
+        <div className='booking-inner'>
+          <div className='booking-eyebrow'>Enquire</div>
+          <h2 className='booking-headline'>Let&rsquo;s talk about your session</h2>
+          <p className='booking-sub'>
+            Fill in a few details below and I&rsquo;ll come back to you within a
+            couple of days to chat through everything.
+          </p>
+          <EnquiryForm />
+        </div>
+      </section>
 
       <section className='contact' id='contact'>
         <div className='contact-inner'>

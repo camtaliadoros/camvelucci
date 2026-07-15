@@ -10,6 +10,16 @@
   --serif: var(--font-source-serif), 'Source Serif 4', Georgia, serif;
 }
 
+@theme inline {
+  --color-forest: var(--forest);
+  --color-terracotta: var(--terra);
+  --color-linen: var(--linen);
+  --color-straw: var(--gold);
+  --color-sage: var(--sage);
+  --font-head: var(--font-plus-jakarta);
+  --font-body: var(--font-source-serif);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -248,6 +258,52 @@ nav {
   .portfolio-grid {
     column-count: 2;
   }
+}
+
+/* ─── BOOKING FORM ─── */
+.booking {
+  background: var(--linen);
+  padding: 5rem 6% 5.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.7s ease both 0.5s;
+}
+
+.booking-inner {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.booking-eyebrow {
+  text-align: center;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.booking-headline {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.booking-sub {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(13px, 1.7vw, 15px);
+  color: rgba(42, 53, 39, 0.6);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 440px;
+  margin: 0 auto 3rem;
 }
 
 /* ─── GET IN TOUCH ─── */
