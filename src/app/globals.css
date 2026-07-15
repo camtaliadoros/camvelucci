@@ -451,7 +451,7 @@ nav {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--terra);
   margin-bottom: 1rem;
 }
 
@@ -476,6 +476,11 @@ nav {
   margin: 0 auto 3rem;
 }
 
+.booking-sub-offer {
+  color: var(--terra);
+  font-weight: 400;
+}
+
 /* ─── GET IN TOUCH ─── */
 .contact {
   background: var(--forest);
@@ -489,23 +494,6 @@ nav {
   animation: fadeUp 0.7s ease both 0.55s;
 }
 
-.contact::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse at 60% 40%,
-      rgba(181, 103, 78, 0.2) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 20% 80%,
-      rgba(201, 185, 138, 0.08) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
-}
 
 .contact-inner {
   position: relative;
@@ -524,10 +512,11 @@ nav {
 }
 
 .contact-headline {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-style: italic;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-style: normal;
   font-size: clamp(26px, 4.5vw, 42px);
+  letter-spacing: -0.02em;
   color: var(--linen);
   line-height: 1.15;
   margin-bottom: 0.75rem;

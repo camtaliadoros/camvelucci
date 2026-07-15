@@ -47,8 +47,13 @@ export default function Home() {
           <div className='booking-eyebrow'>Enquire</div>
           <h2 className='booking-headline'>Let&rsquo;s talk about your session</h2>
           <p className='booking-sub'>
-            Fill in a few details below and I&rsquo;ll come back to you within a
-            couple of days to chat through everything.
+            Interested in booking or just want to know more? Fill in a few
+            details below, and I&rsquo;ll be in touch to chat through everything.
+            <br />
+            <br />
+            <span className='booking-sub-offer'>
+              Summer Sessions Available — Discounted packages starting at £150
+            </span>
           </p>
           <EnquiryForm />
         </div>
@@ -64,13 +69,7 @@ export default function Home() {
             conversation
           </h2>
 
-          <p className='contact-sub'>
-            Interested in a session, or just want to know more?
-            <br />
-            I&apos;d love to hear from you.
-            <br />
-            Packages from £150 — introductory offer for early bookings
-          </p>
+          <p className='contact-sub'>I&apos;d love to hear from you.</p>
 
           <div className='contact-options'>
             <a href='mailto:hello@camvelucci.com' className='contact-option'>
