@@ -260,6 +260,87 @@ nav {
   }
 }
 
+/* ─── LEGAL / PRIVACY ─── */
+.legal {
+  flex: 1;
+  padding: 2rem 6% 5rem;
+}
+
+.legal-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(42, 53, 39, 0.85);
+}
+
+.legal-inner p {
+  margin-bottom: 1.25rem;
+}
+
+.legal-inner a {
+  color: var(--terra);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-title {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 42px);
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  margin-bottom: 0.5rem;
+}
+
+.legal-updated {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--sage);
+  margin-bottom: 2.5rem;
+}
+
+.legal-h2 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--forest);
+  margin: 2.5rem 0 0.75rem;
+  scroll-margin-top: 2rem;
+}
+
+.legal-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.legal-list li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-back {
+  color: var(--sage);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-back:hover {
+  color: var(--terra);
+}
+
+.legal-footer-note {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid rgba(42, 53, 39, 0.12);
+}
+
 /* ─── BOOKING FORM ─── */
 .booking {
   background: var(--linen);
@@ -479,6 +560,19 @@ footer {
   text-transform: uppercase;
   color: var(--sage);
   opacity: 0.6;
+}
+
+.footer-link {
+  color: var(--sage);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--terra);
+}
+
+.footer-sep {
+  margin: 0 0.6em;
 }
 
 /* ─── ANIMATIONS ─── */

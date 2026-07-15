@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState, type FormEvent } from "react";
 
 const SESSION_TYPES = ["Maternity", "Lifestyle Newborn", "Family", "Not sure yet"];
@@ -124,6 +125,24 @@ export default function EnquiryForm() {
           Tell me more about what you&rsquo;re looking for <span className="text-terracotta">*</span>
         </label>
         <textarea name="message" required className="w-full border-0 border-b border-forest/30 bg-transparent text-[12.5px] py-2 outline-none focus:border-terracotta transition-colors min-h-[90px] resize-y" />
+      </div>
+
+      <div className="flex items-start gap-3">
+        <input
+          id="consent"
+          name="consent"
+          type="checkbox"
+          required
+          className="mt-[3px] h-4 w-4 shrink-0 accent-[#9c5841]"
+        />
+        <label htmlFor="consent" className="text-[12.5px] leading-relaxed">
+          I agree to my details being used to respond to my enquiry, as
+          described in the{" "}
+          <Link href="/privacy" className="underline underline-offset-2 text-terracotta">
+            Privacy Policy
+          </Link>
+          . <span className="text-terracotta">*</span>
+        </label>
       </div>
 
       {status === "error" && (

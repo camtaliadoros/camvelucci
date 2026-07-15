@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import PortfolioSection from '@/components/PortfolioSection';
 import EnquiryForm from '@/components/EnquiryForm';
 
@@ -134,7 +135,13 @@ export default function Home() {
           © {new Date().getFullYear()} Cam Velucci Photography. All rights
           reserved.
         </div>
-        <div className='footer-loc'>Hertfordshire, England</div>
+        <div className='footer-loc'>
+          <Link href='/privacy' className='footer-link'>
+            Privacy Policy
+          </Link>
+          <span className='footer-sep'>·</span>
+          Hertfordshire, England
+        </div>
       </footer>
     </div>
   );
