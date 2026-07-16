@@ -52,7 +52,9 @@ export default function Home() {
             <br />
             <br />
             <span className='booking-sub-offer'>
-              Summer Sessions Available — Discounted packages starting at £150
+              Summer Sessions Available
+              <br />
+              Discounted packages starting at £150
             </span>
           </p>
           <EnquiryForm />
