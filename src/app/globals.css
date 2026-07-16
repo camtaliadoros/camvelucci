@@ -65,6 +65,7 @@ nav {
 .nav-logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-tag {
@@ -72,7 +73,8 @@ nav {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--terra);
+  text-align: right;
 }
 
 /* ─── HERO ─── */
@@ -680,6 +682,12 @@ footer {
 @media (max-width: 500px) {
   nav {
     padding: 1.5rem 5%;
+    gap: 0.75rem;
+  }
+
+  .nav-tag {
+    font-size: 7.5px;
+    letter-spacing: 0.1em;
   }
 
   .hero {

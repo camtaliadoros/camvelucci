@@ -15,7 +15,7 @@ export default function Home() {
             alt='Cam Velucci Photography'
             width={1200}
             height={400}
-            className='block h-[48px] w-auto'
+            className='block h-[34px] w-auto shrink-0 sm:h-[48px]'
             priority
           />
         </div>
