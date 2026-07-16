@@ -694,6 +694,10 @@ footer {
     padding: 3rem 5% 2rem;
   }
 
+  .hero-headline {
+    font-size: clamp(18px, 6vw, 22px);
+  }
+
   .contact {
     padding: 4rem 5%;
   }
