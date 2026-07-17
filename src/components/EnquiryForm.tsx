@@ -145,6 +145,21 @@ export default function EnquiryForm() {
         </label>
       </div>
 
+      <div className="flex items-start gap-3">
+        <input
+          id="newsletter"
+          name="newsletter"
+          type="checkbox"
+          value="yes"
+          className="mt-[3px] h-4 w-4 shrink-0 accent-[#9c5841]"
+        />
+        <label htmlFor="newsletter" className="text-[12.5px] leading-relaxed">
+          Tick if you&rsquo;d like to join my mailing list and be the first to
+          know about exclusive offers, discounts, access to priority bookings and
+          more. You can unsubscribe at any time.
+        </label>
+      </div>
+
       {status === "error" && (
         <p className="text-terracotta text-sm text-center">
           Something went wrong sending your enquiry — please try again or email hello@camvelucci.com directly.

@@ -51,6 +51,9 @@ export default function PrivacyPage() {
               type, preferred setting, how you heard about me, and anything you
               tell me in your message
             </li>
+            <li>
+              Whether you ticked the optional box to join my mailing list
+            </li>
           </ul>
           <p>
             I also collect limited anonymous usage data through analytics (see{' '}
@@ -67,7 +70,33 @@ export default function PrivacyPage() {
           <p>
             I will <strong>not</strong> use your details to send you marketing or
             promotional messages unless you have separately agreed to receive
-            them.
+            them by ticking the mailing list box on the form.
+          </p>
+
+          <h2 className='legal-h2'>Mailing list</h2>
+          <p>
+            The enquiry form includes an optional, unticked box you can use to
+            join my mailing list. It is entirely separate from your enquiry —
+            you can send an enquiry without joining, and choosing not to join
+            makes no difference to your enquiry or booking.
+          </p>
+          <p>
+            If you tick it, I&rsquo;ll use your name and email address to send
+            you occasional updates about exclusive offers, discounts, priority
+            booking access and similar news. I will never sell or share your
+            email address with anyone else for their own marketing.
+          </p>
+          <p>
+            The lawful basis for these messages is your <strong>consent</strong>.
+            You can withdraw it at any time — every email includes an unsubscribe
+            link, or you can simply email me at{' '}
+            <a href='mailto:hello@camvelucci.com'>hello@camvelucci.com</a>{' '}
+            and I&rsquo;ll remove you straight away. Withdrawing your consent
+            doesn&rsquo;t affect anything I sent before you withdrew it.
+          </p>
+          <p>
+            I keep your details on the mailing list until you unsubscribe or ask
+            me to remove them.
           </p>
 
           <h2 className='legal-h2'>Lawful basis for processing</h2>
@@ -77,7 +106,8 @@ export default function PrivacyPage() {
             running my photography business, and, where relevant, in order to{' '}
             <strong>take steps to enter into a contract</strong> with you at your
             request. Where you tick the consent box on the form, that also
-            records your agreement to this policy.
+            records your agreement to this policy. Mailing list messages are sent
+            on the basis of your <strong>consent</strong>, as described above.
           </p>
 
           <h2 className='legal-h2'>Who I share it with</h2>

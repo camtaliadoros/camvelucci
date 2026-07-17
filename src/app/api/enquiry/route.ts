@@ -11,6 +11,7 @@ interface EnquiryPayload {
   sessionLocationType: string;
   heardAbout?: string;
   message: string;
+  newsletter?: string;
 }
 
 const REQUIRED_FIELDS: (keyof EnquiryPayload)[] = [
@@ -57,33 +58,52 @@ async function writeToAirtable(data: EnquiryPayload): Promise<{ ok: boolean }> {
     return { ok: false };
   }
 
-  try {
-    const res = await fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
+  const fields: Record<string, string | boolean> = {
+    "First Name": data.firstName,
+    "Last Name": data.lastName,
+    Email: data.email,
+    Phone: data.phone,
+    Location: data.location || "",
+    "Session Type": data.sessionType,
+    "Session Location": data.sessionLocationType,
+    "How Heard": data.heardAbout || "",
+    Message: data.message,
+    "Newsletter Opt-In": data.newsletter === "yes",
+    "Date received": new Date().toISOString(),
+    Source: "Website",
+  };
+
+  async function post(body: Record<string, string | boolean>) {
+    return fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        typecast: true,
-        fields: {
-          "First Name": data.firstName,
-          "Last Name": data.lastName,
-          Email: data.email,
-          Phone: data.phone,
-          Location: data.location || "",
-          "Session Type": data.sessionType,
-          "Session Location": data.sessionLocationType,
-          "How Heard": data.heardAbout || "",
-          Message: data.message,
-          "Date received": new Date().toISOString(),
-          Source: "Website",
-        },
-      }),
+      body: JSON.stringify({ typecast: true, fields: body }),
     });
+  }
 
+  try {
+    let res = await post(fields);
+
+    // Airtable rejects the whole record if any field name is unknown. Rather
+    // than lose the enquiry, drop the offending field and write the rest.
     if (!res.ok) {
       const error = await res.json();
+      const unknownField = JSON.stringify(error).includes("UNKNOWN_FIELD_NAME");
+
+      if (unknownField) {
+        console.warn("Airtable rejected an unknown field — retrying without Newsletter Opt-In");
+        const { "Newsletter Opt-In": _omitted, ...rest } = fields;
+        res = await post(rest);
+        if (!res.ok) {
+          console.error("Airtable error:", JSON.stringify(await res.json()));
+          return { ok: false };
+        }
+        return { ok: true };
+      }
+
       console.error("Airtable error:", JSON.stringify(error));
       return { ok: false };
     }
@@ -119,6 +139,7 @@ async function sendNotificationEmail(data: EnquiryPayload): Promise<{ ok: boolea
         `Session type: ${data.sessionType}`,
         `At home or outdoors: ${data.sessionLocationType}`,
         `How heard: ${data.heardAbout || "—"}`,
+        `Newsletter opt-in: ${data.newsletter === "yes" ? "Yes" : "No"}`,
         "",
         "Message:",
         data.message,
