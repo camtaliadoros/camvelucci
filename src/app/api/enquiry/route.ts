@@ -153,7 +153,7 @@ function clientConfirmationHtml(firstName: string): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your message has landed safely</title>
+  <title>Thank you for getting in touch</title>
 </head>
 <body style="margin:0; padding:0; background-color:#f0eae0;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0eae0;">
@@ -161,14 +161,12 @@ function clientConfirmationHtml(firstName: string): string {
       <td align="center" style="padding:32px 16px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px; background-color:#ffffff; border-radius:10px; overflow:hidden; border:1px solid rgba(42,53,39,0.08);">
           <tr>
-            <td style="background-color:#2a3527; padding:28px 36px; text-align:center;">
-              <div style="font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:#c9b98a;">Cam Velucci Photography</div>
+            <td style="background-color:#2a3527; padding:32px 36px; text-align:center;">
+              <img src="https://camvelucci.com/brochure/images/logo-full-linen.png" alt="Cam Velucci Photography" width="220" style="display:block; width:220px; height:auto; margin:0 auto;">
             </td>
           </tr>
           <tr>
             <td style="padding:40px 36px 32px;">
-              <h1 style="margin:0 0 24px; font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.02em; color:#2a3527; line-height:1.2;">Your message has landed safely</h1>
-
               <p style="margin:0 0 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">Hi ${name},</p>
 
               <p style="margin:0 0 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">Thank you so much for getting in touch! Your message has landed safely with me.</p>
@@ -177,10 +175,16 @@ function clientConfirmationHtml(firstName: string): string {
 
               <p style="margin:0 0 28px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">In the meantime, if you&rsquo;d like to get a feel for how I work, have a wander through my recent stories:</p>
 
-              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
                 <tr>
-                  <td style="border-radius:6px; background-color:#9c5841;">
-                    <a href="https://instagram.com/camvelucciphotography" target="_blank" style="display:inline-block; padding:14px 30px; font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.04em; color:#f0eae0; text-decoration:none;">Follow along on Instagram</a>
+                  <td align="center">
+                    <table role="presentation" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="border-radius:6px; background-color:#9c5841;">
+                          <a href="https://instagram.com/camvelucciphotography" target="_blank" style="display:inline-block; padding:14px 30px; font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.04em; color:#f0eae0; text-decoration:none;">Follow along on Instagram</a>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
@@ -215,7 +219,7 @@ async function sendClientConfirmationEmail(data: EnquiryPayload): Promise<{ ok: 
       from: "Cam Velucci Photography <hello@camvelucci.com>",
       to: data.email,
       replyTo: "hello@camvelucci.com",
-      subject: "Your message has landed safely",
+      subject: "Thank you for getting in touch",
       html: clientConfirmationHtml(data.firstName),
       text: [
         `Hi ${data.firstName},`,
