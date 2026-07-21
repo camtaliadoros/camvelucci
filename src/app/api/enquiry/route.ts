@@ -192,17 +192,17 @@ function clientConfirmationHtml(firstName: string): string {
 
               <p style="margin:0 0 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">Thank you so much for getting in touch! Your message has landed safely with me.</p>
 
-              <p style="margin:0 0 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">I&rsquo;m likely behind a camera or knee-deep in family life right now (both, probably), so this is just a quick note to say: I&rsquo;ve got you. I&rsquo;ll come back to you personally in the next couple of days with a proper reply and everything you need to know.</p>
+              <p style="margin:0 0 28px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">I&rsquo;m likely behind a camera or knee-deep in family life right now (both, probably), so this is just a quick note to say: I&rsquo;ve got you. I&rsquo;ll come back to you personally as soon as I can.</p>
 
-              <p style="margin:0 0 28px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">In the meantime, if you&rsquo;d like to get a feel for how I work, have a wander through my recent stories:</p>
+              <p style="margin:0 0 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">In the meantime, here&rsquo;s my brochure if you&rsquo;d like to see how sessions work and what&rsquo;s included:</p>
 
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 28px;">
                 <tr>
                   <td align="center">
                     <table role="presentation" cellpadding="0" cellspacing="0">
                       <tr>
                         <td style="border-radius:6px; background-color:#9c5841;">
-                          <a href="https://instagram.com/camvelucciphotography" target="_blank" style="display:inline-block; padding:14px 30px; font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.04em; color:#f0eae0; text-decoration:none;">Follow along on Instagram</a>
+                          <a href="https://camvelucci.com/brochure" target="_blank" style="display:inline-block; padding:14px 30px; font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.04em; color:#f0eae0; text-decoration:none;">View the brochure</a>
                         </td>
                       </tr>
                     </table>
@@ -210,7 +210,9 @@ function clientConfirmationHtml(firstName: string): string {
                 </tr>
               </table>
 
-              <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">Talk very soon,<br><span style="font-weight:400;">Cam x</span></p>
+              <p style="margin:0 0 28px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">And if you&rsquo;d like to get a feel for how I work, you can also have a wander through my <a href="https://instagram.com/camvelucciphotography" target="_blank" style="color:#b5674e;">recent work</a>.</p>
+
+              <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.7; color:rgba(42,53,39,0.85);">Talk very soon,<br><span style="font-weight:400;">Cam</span></p>
             </td>
           </tr>
           <tr>
@@ -247,12 +249,14 @@ async function sendClientConfirmationEmail(data: EnquiryPayload): Promise<{ ok: 
         "",
         "Thank you so much for getting in touch! Your message has landed safely with me.",
         "",
-        "I'm likely behind a camera or knee-deep in family life right now (both, probably), so this is just a quick note to say: I've got you. I'll come back to you personally in the next couple of days with a proper reply and everything you need to know.",
+        "I'm likely behind a camera or knee-deep in family life right now (both, probably), so this is just a quick note to say: I've got you. I'll come back to you personally as soon as I can.",
         "",
-        "In the meantime, if you'd like to get a feel for how I work, have a wander through my recent stories here: instagram.com/camvelucciphotography",
+        "In the meantime, here's my brochure if you'd like to see how sessions work and what's included: camvelucci.com/brochure",
+        "",
+        "And if you'd like to get a feel for how I work, you can also have a wander through my recent work: instagram.com/camvelucciphotography",
         "",
         "Talk very soon,",
-        "Cam x",
+        "Cam",
       ].join("\n"),
     });
 
