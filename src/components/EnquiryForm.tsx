@@ -49,7 +49,7 @@ export default function EnquiryForm() {
     return (
       <div className="text-center py-12">
         <p className="font-body text-[15px] italic text-forest">
-          Thank you — your enquiry has been sent. I&rsquo;ll come back to you within a couple of days.
+          Thank you, your enquiry is on its way. I&rsquo;ve sent a confirmation to your inbox with my brochure, and I&rsquo;ll come back to you personally as soon as I can.
         </p>
       </div>
     );
