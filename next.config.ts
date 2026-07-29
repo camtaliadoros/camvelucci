@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         source: '/brochure',
         destination: '/brochure/index.html',
       },
+      {
+        source: '/newborn-welcome',
+        destination: '/newborn-welcome/index.html',
+      },
     ];
   },
   images: {
