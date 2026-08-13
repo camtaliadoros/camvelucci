@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
+import { Plus_Jakarta_Sans, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const sourceSerif = Source_Serif_4({
+const sourceSerif = Roboto_Serif({
   subsets: ["latin"],
   variable: "--font-source-serif",
   weight: ["300", "400"],
