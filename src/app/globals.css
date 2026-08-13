@@ -7,7 +7,7 @@
   --gold: #c9b98a;
   --sage: #7a8f78;
   --sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
-  --serif: var(--font-source-serif), 'Roboto Serif', Georgia, serif;
+  --serif: var(--font-source-serif), 'Alice', Georgia, serif;
 }
 
 @theme inline {
