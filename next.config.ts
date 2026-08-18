@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         source: '/newborn-welcome',
         destination: '/newborn-welcome/index.html',
       },
+      {
+        source: '/family-welcome',
+        destination: '/family-welcome/index.html',
+      },
     ];
   },
   images: {
