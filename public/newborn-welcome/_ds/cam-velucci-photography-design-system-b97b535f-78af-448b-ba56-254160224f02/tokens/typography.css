@@ -4,8 +4,8 @@
 :root {
   /* Families */
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;   /* headings, nav, labels, CTAs */
-  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;         /* body copy */
-  --font-quote: 'Cormorant Garamond', Georgia, serif;                        /* pull quotes (italic) */
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;         /* body copy */
+  --font-quote: 'Lora', Georgia, serif;                        /* pull quotes (italic) */
   /* The logo wordmark (Amsterdam Four, Canva) has no webfont — use the PNG logos in /assets. */
 
   /* Weights */
