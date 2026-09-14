@@ -30,14 +30,6 @@ export default function Home() {
           <br />
           <em>feel it all</em>
         </h1>
-
-        <div className='ornament'>
-          <div className='ornament-line' />
-          <div className='ornament-dot' />
-          <div className='ornament-line' />
-        </div>
-
-        <div className='tagline'>Story-led summer sessions available</div>
       </section>
 
       <PortfolioSection />
@@ -52,8 +44,6 @@ export default function Home() {
             <br />
             <br />
             <span className='booking-sub-offer'>
-              Summer Sessions Available
-              <br />
               Discounted packages starting at £150
             </span>
           </p>
