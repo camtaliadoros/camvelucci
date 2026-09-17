@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         source: '/family-welcome',
         destination: '/family-welcome/index.html',
       },
+      {
+        source: '/pumpkin-welcome',
+        destination: '/pumpkin-welcome/pumpkin-patch-welcome-guide.pdf',
+      },
     ];
   },
   images: {
